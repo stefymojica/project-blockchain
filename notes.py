@@ -1,82 +1,101 @@
-#### Create a function
+# Create a function
 
 blockchain = []
+
 
 def add_value():
     blockchain.append(5.3)
-    #print(blockchain)
+    # print(blockchain)
+
 
 add_value()
 
-#### Create a function
+# Create a function
 
 blockchain = [[1]]
 
+
 def add_value(transaction_amount):
-    blockchain.append([blockchain[-1],transaction_amount])
-    #print(blockchain)
+    blockchain.append([blockchain[-1], transaction_amount])
+    # print(blockchain)
+
 
 add_value(2)
 add_value(0.9)
 add_value(10.36)
 
-### create other function
+# create other function
 
 blockchain = [[1]]
+
 
 def get_last_blockchain_value():
     return blockchain[-1]
 
+
 def add_value(transaction_amount):
-    blockchain.append([get_last_blockchain_value(),transaction_amount])
+    blockchain.append([get_last_blockchain_value(), transaction_amount])
+
 
 add_value(2)
 add_value(0.9)
 add_value(10.36)
 
-#print(blockchain)
+# print(blockchain)
 
-## Working with Inputs
+# Working with Inputs
 
 blockchain = []
 
+
 def get_last_blockchain_value():
     return blockchain[-1]
 
+
 def add_value(transaction_amount, last_transaction=[1]):
-    blockchain.append([last_transaction,transaction_amount])
+    blockchain.append([last_transaction, transaction_amount])
+
 
 txt_amount = float(input('Your transaction amount please: '))
 add_value(txt_amount)
 
 txt_amount = float(input('Your transaction amount please: '))
-add_value(last_transaction=get_last_blockchain_value(), transaction_amount=txt_amount)
+add_value(last_transaction=get_last_blockchain_value(),
+          transaction_amount=txt_amount)
 
 txt_amount = float(input('Your transaction amount please: '))
 add_value(txt_amount, get_last_blockchain_value())
 
 # print(blockchain)
 
-## Avoiding repetitive code
+# Avoiding repetitive code
 
 blockchain = []
+
 
 def get_last_blockchain_value():
     return blockchain[-1]
 
+
 def add_value(transaction_amount, last_transaction=[1]):
-    blockchain.append([last_transaction,transaction_amount])
+    blockchain.append([last_transaction, transaction_amount])
+
 
 def get_user_input():
     return float(input('Your transaction amount please: '))
 
+
 txt_amount = get_user_input()
 add_value(txt_amount)
 
 txt_amount = get_user_input()
-add_value(last_transaction=get_last_blockchain_value(), transaction_amount=txt_amount)
+add_value(last_transaction=get_last_blockchain_value(),
+          transaction_amount=txt_amount)
 
 txt_amount = get_user_input()
 add_value(txt_amount, get_last_blockchain_value())
 
 # print(blockchain)
+
+# comentar
+""" comentar """
