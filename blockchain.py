@@ -17,15 +17,13 @@ def get_user_input():
 txt_amount = get_user_input()
 add_value(txt_amount)
 
-txt_amount = get_user_input()
-add_value(last_transaction=get_last_blockchain_value(),
-          transaction_amount=txt_amount)
+while True:
+    txt_amount = get_user_input()
+    add_value(txt_amount, get_last_blockchain_value())
 
-txt_amount = get_user_input()
-add_value(txt_amount, get_last_blockchain_value())
-
-for block in blockchain:
-    print('Outputting Block')
-    print(block)
+    # Output the blockchain list to the console
+    for block in blockchain:
+        print('Outputting Block')
+        print(block)
 
 print('Done!')
