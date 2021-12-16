@@ -42,3 +42,17 @@ True
 1 not == 1
 error
 ```
+```python
+# and 
+age = 29
+if age > 20 and age < 30:
+    print('Between 20 and 20')
+
+# or 
+if age < 30 or age > 60:
+    print('Not between 30 and 60')
+
+# both
+if age > 20 and age < 30 or age > 60:
+    print('Yes')
+```
