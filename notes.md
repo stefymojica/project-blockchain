@@ -35,4 +35,10 @@ True
 # check data
 2 in data
 False
+---------
+2 not in data
+True
+---------
+1 not == 1
+error
 ```
