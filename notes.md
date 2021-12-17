@@ -56,3 +56,17 @@ if age < 30 or age > 60:
 if age > 20 and age < 30 or age > 60:
     print('Yes')
 ```
+
+### Grouping conditionals
+
+```python
+name = 'Max'
+age = 29 
+if name == 'chris' and age > 20 or age < 30:
+    print('Yes')
+# Es yes porque no toma el condicional and
+Yes
+
+if name == 'chris' and (age > 20 or age < 30):
+    print('Yes')
+```
